@@ -14,3 +14,9 @@ spring:
 app:
   service-name: Identity Service
   message: Identity configuration loaded from GitHub
+
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${server.port}:${random.value}
